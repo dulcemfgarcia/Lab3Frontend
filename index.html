@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Registrar Nota</title>
+  </head>
+  <body>
+        <label>Instancia1</label>
+    <section class="container">
+      <header>Registrar Nota</header>
+      <!-- El formulario envía los datos al backend en la ruta /registro usando el método POST -->
+      <form id="notaForm" action="/registro" method="POST" class="form">
+        <div class="input-box">
+          <label>Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre" required />
+        </div>
+        <div class="input-box">
+            <label>Apellido</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Ingrese el apellido" required />
+          </div>
+        <div class="input-box">
+          <label>Carnet</label>
+          <input type="text" id="carnet" name="carnet" placeholder="Ingrese el carnet" required />
+        </div>
+        <div class="input-box">
+            <label>Curso</label>
+            <select id="curso" name="curso" class="select-box" required>
+              <option value="" disabled selected>Seleccione el curso</option>
+              <option value="Virtualización">Virtualización</option>
+              <option value="Ingeniería de software">Ingeniería de software</option>
+              <option value="Sistemas Operativos">Sistemas Operativos</option>
+            </select>
+        </div>
+        <div class="input-box">
+            <label>Nota</label>
+            <input type="number" id="nota" name="nota" placeholder="Ingrese la nota" required />
+        </div>
+        <div class="column">
+            <!-- El botón Guardar envía el formulario -->
+            <button type="submit" id="guardar" class="submit-button" href="detatil.html">Guardar</button>
+            <!-- El botón Cancelar limpia el formulario -->
+            <button type="reset" id="limpiar" class="clear-button">Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
